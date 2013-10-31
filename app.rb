@@ -4,22 +4,22 @@ require "cuba/contrib"
 require "rack/protection"
 require "shield"
 
+APP_SECRET = ENV.fetch("APP_SECRET")
+
 Cuba.plugin Cuba::Mote
 Cuba.plugin Cuba::TextHelpers
 Cuba.plugin Shield::Helpers
 
-# Require all application files.
 Dir["./models/**/*.rb"].each  { |rb| require rb }
 Dir["./routes/**/*.rb"].each  { |rb| require rb }
 
-# Require all helper files.
 Dir["./helpers/**/*.rb"].each { |rb| require rb }
-Dir["./filters/**/*.rb"].each { |rb| require rb }
+Dir["./lib/**/*.rb"].each { |rb| require rb }
 
 Cuba.use Rack::MethodOverride
 Cuba.use Rack::Session::Cookie,
   key: "agpelliza",
-  secret: "f38e07c008d362437645627c8886afeb67e45798"
+  secret: APP_SECRET
 
 Cuba.use Rack::Protection
 Cuba.use Rack::Protection::RemoteReferrer
