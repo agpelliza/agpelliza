@@ -1,0 +1,29 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    armor (0.0.2)
+    cuba (3.1.0)
+      rack
+    cuba-contrib (3.1.0)
+      cuba (~> 3.1)
+    cutest (1.2.1)
+    mote (1.1.2)
+    rack (1.5.2)
+    rack-protection (1.5.1)
+      rack
+    rack-test (0.6.2)
+      rack (>= 1.0)
+    shield (2.1.0)
+      armor
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  cuba (= 3.1.0)
+  cuba-contrib (= 3.1.0)
+  cutest (= 1.2.1)
+  mote (= 1.1.2)
+  rack-protection (= 1.5.1)
+  rack-test (= 0.6.2)
+  shield (= 2.1.0)

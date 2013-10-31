@@ -2,6 +2,6 @@ cuba -v 3.1.0
 mote -v 1.1.2
 cuba-contrib -v 3.1.0
 rack-protection -v 1.5.1
+rack-test -v 0.6.2
 shield -v 2.1.0
 cutest -v 1.2.1
-rack-test -v 0.6.2
