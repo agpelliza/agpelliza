@@ -51,7 +51,7 @@ Cuba.define do
   end
 
   on root do
-    render("home", title: "Blog", posts: posts)
+    render("home", title: "Home", posts: posts)
   end
 
   on "posts/:id" do |id|
