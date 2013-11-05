@@ -5,3 +5,4 @@ rack-protection -v 1.5.1
 rack-test -v 0.6.2
 shield -v 2.1.0
 cutest -v 1.2.1
+maruku -v 0.7.0

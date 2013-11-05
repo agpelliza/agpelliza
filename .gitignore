@@ -1,2 +1,5 @@
 /.gs
 env.sh
+.DS_Store
+dump.rdb
+seed.rb

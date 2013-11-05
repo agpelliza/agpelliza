@@ -1,35 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <link
-    href="http://fonts.googleapis.com/css?family=Ubuntu+Mono|Mate|Parisienne|Patua+One"
-    rel="stylesheet"
-    type="text/css">
-  <link
-    href="/css/styles.css"
-    rel="stylesheet"
-    type="text/css">
-  <title>Cuba</title>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="/css/railscasts_theme.css" />
+    <title>{{ title }}</title>
+  </head>
+  
   <body>
-    <header>
-      <h1>Cuba</h1>
-      <?xml version="1.0" encoding="UTF-8"?>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 1235 1175"
-        width="70px"
-        height="70px">
-        <path
-          fill="#cc3333"
-          d="M0,449h1235l-999,726 382-1175 382,1175z"/>
-      </svg>
-      <p>Ceci n'est pas un framework.</p>
-    </header>
+    
+    <div class="nav">
+    </div>
 
-    <section>
-      {{content}}
-    </section>
+    <div class="header">
+      <h2>Blog</h2>
+      <h3>my posts</h3>
+      <div class="social-bar">
+        <div class="social-bar-buttons">
+          <a href="/">
+            <img src="/img/home-24.png" />
+          </a>
+
+          <a href="http://github.com/agpelliza">
+            <img src="/img/octocat-24.png" />
+          </a>
+
+          <a href="http://twitter.com/agpelliza">
+            <img src="/img/twitter-24.png" />
+          </a>
+
+          <a href="/talks">
+            <img src="/img/talks-24.png" />
+          </a>
+
+          <a href="http://feeds.feedburner.com/agpelliza">
+            <img src="/img/rss-24.png" />
+          </a>
+        </div>
+        <hr/>
+      </div>
+    </div>
+
+   {{content}}
+
   </body>
 </html>

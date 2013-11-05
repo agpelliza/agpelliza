@@ -20,6 +20,3 @@ test:
 push:
 	git push
 	git push heroku master
-
-db:
-	ruby seed.rb

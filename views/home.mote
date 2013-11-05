@@ -1,5 +1,7 @@
-<p>
-  Congratulations! You have just created a Cuba app.<br> The text you
-  are reading is located at <code>./views/home.mote</code>.<br> Make
-  sure you change it to something more interesting.
-</p>
+<div class="wrapper">
+  <ul class="homepage">
+    % posts.each do |post|
+      <a href="/posts/{{post.id}}"><li><span>04 Nov 2013</span>    {{post.title}}</li></a>
+    % end
+  </ul>
+</div>
