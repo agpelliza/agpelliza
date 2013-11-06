@@ -28,7 +28,12 @@ class Post
   end
 
   def self.parse(file)
-    markdown(file)
+    case file
+    when /\.md$/
+      markdown(file)
+    when /\.html$/
+      read(file)
+    end
   end
 
   def self.markdown(file)
