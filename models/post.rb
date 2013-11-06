@@ -13,7 +13,8 @@ class Post
   end
 
   def self.[](file)
-    new(id(file), title(file), body(file))
+    post_body = parse(file)
+    new(id(file), title(post_body), post_body)
   end
 
   protected
@@ -22,11 +23,11 @@ class Post
     File.basename(file, File.extname(file))
   end
   
-  def self.title(file)
-    markdown(file).match(/>(.*?)<\/h1>/).captures.first
+  def self.title(post_body)
+    post_body.match(/>(.*?)<\/h1>/).captures.first
   end
 
-  def self.body(file)
+  def self.parse(file)
     markdown(file)
   end
 

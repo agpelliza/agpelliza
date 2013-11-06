@@ -35,11 +35,11 @@ Cuba.define do
   def posts
     posts = []
     last_post = nil
-    Dir["./posts/*.md"].sort.reverse.each do |file| 
+    Dir["./posts/*.{md,html}"].sort.reverse.each do |file| 
       post = Post[file]
-      post.previous = last_post
+      post.next = last_post
 
-      last_post.next = post unless last_post.nil?
+      last_post.previous = post unless last_post.nil?
       last_post = post
       posts << post
     end
@@ -54,7 +54,7 @@ Cuba.define do
     render("home", title: "Home", posts: posts)
   end
 
-  on "posts/:id" do |id|
+  on "post/:id" do |id|
     post = find_post(id)
 
     render("post", title: post.title, post: post)
