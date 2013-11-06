@@ -17,6 +17,8 @@ Dir["./routes/**/*.rb"].each  { |rb| require rb }
 Dir["./helpers/**/*.rb"].each { |rb| require rb }
 Dir["./lib/**/*.rb"].each { |rb| require rb }
 
+Cuba.plugin PostHelper
+
 Cuba.use Rack::MethodOverride
 Cuba.use Rack::Session::Cookie,
   key: "agpelliza",
@@ -32,31 +34,11 @@ Cuba.use Rack::Static,
 Cuba.define do
   persist_session!
 
-  def posts
-    posts = []
-    last_post = nil
-    Dir["./posts/*.{md,html}"].sort.reverse.each do |file| 
-      post = Post[file]
-      post.next = last_post
-
-      last_post.previous = post unless last_post.nil?
-      last_post = post
-      posts << post
-    end
-    return posts
-  end
-
-  def find_post(post_id)
-    posts.select {|post| post.id == post_id}.first
-  end
-
   on root do
-    render("home", title: "Home", posts: posts)
+    run Posts
   end
 
-  on "post/:id" do |id|
-    post = find_post(id)
-
-    render("post", title: post.title, post: post)
+  on default do
+    run Posts
   end
 end
