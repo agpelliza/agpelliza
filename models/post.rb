@@ -1,20 +1,23 @@
 class Post
   attr_reader :id
+  attr_reader :date
   attr_reader :title
   attr_reader :body
 
   attr_accessor :next
   attr_accessor :previous
 
-  def initialize(id, title, body)
+  def initialize(id, date, title, body)
     @id = id
+    @date = date
     @title = title
     @body = body
   end
 
   def self.[](file)
+    post_id = id(file)
     post_body = parse(file)
-    new(id(file), title(post_body), post_body)
+    new(post_id, date(post_id), title(post_body), post_body)
   end
 
   protected
@@ -23,6 +26,11 @@ class Post
     File.basename(file, File.extname(file))
   end
   
+  def self.date(post_id)
+    date_str = post_id.split('_').first
+    Date.parse("#{date_str[0..3]}-#{date_str[4..5]}-#{date_str[6..7]}")
+  end
+
   def self.title(post_body)
     post_body.match(/>(.*?)<\/h1>/).captures.first
   end
