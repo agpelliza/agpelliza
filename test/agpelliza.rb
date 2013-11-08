@@ -5,6 +5,6 @@ scope do
   test "should display homepage" do
     get "/"
 
-    assert_equal 200, last_response.status
+    assert_equal 302, last_response.status
   end
 end
