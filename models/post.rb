@@ -1,41 +1,27 @@
 class Post
-  attr_reader :id
   attr_reader :date
   attr_reader :title
-  attr_reader :body
 
   attr_accessor :next
   attr_accessor :previous
 
-  def initialize(id, date, title, body)
-    @id = id
-    @date = date
-    @title = title
-    @body = body
+  def initialize(*args)
+    @file, @date, @title = *args
   end
 
   def self.[](file)
-    post_id = id(file)
-    post_body = parse(file)
-    new(post_id, date(post_id), title(post_body), post_body)
+    new(*parse(file))
   end
 
-  protected
-
-  def self.id(file)
-    File.basename(file, File.extname(file))
-  end
-  
-  def self.date(post_id)
-    date_str = post_id.split('_').first
-    Date.parse("#{date_str[0..3]}-#{date_str[4..5]}-#{date_str[6..7]}")
+  def id
+    Post.basename(@file)
   end
 
-  def self.title(post_body)
-    post_body.match(/>(.*?)<\/h1>/).captures.first
+  def body
+    @body ||= Post.parse_post(@file)
   end
 
-  def self.parse(file)
+  def self.parse_post(file)
     case file
     when /\.md$/
       markdown(file)
@@ -44,11 +30,31 @@ class Post
     end
   end
 
+  protected
+
   def self.markdown(file)
     Maruku.new(read(file)).to_html
   end
 
   def self.read(file)
     File.read(file, encoding: "utf-8")
+  end
+
+  def self.parse(file)
+    file_name_array = basename(file).split('_')
+    date_str = file_name_array.shift
+    return [file, date_parse(date_str), title_parse(file_name_array)]
+  end
+
+  def self.date_parse(date_str)
+    Date.parse("#{date_str[0..3]}-#{date_str[4..5]}-#{date_str[6..7]}")
+  end
+
+  def self.title_parse(title_array)
+    title_array.map {|word| word.capitalize}.join(' ')
+  end
+
+  def self.basename(file)
+    File.basename(file, File.extname(file))
   end
 end
