@@ -1,1 +1,5 @@
-About this blog
+This is a peculiar Blog, the first thing some may notice is that it has not **comments** feature as other posts does. This was an intentional thing, it just doesn't fit my expectations for this space. I wanted a clean and straight forward to read posts, in a word I want it **simple**, and I'm not interested in starting *flame wars* on opinionated posts, so comments won't be much help. I don't want this to be misunderstand, I do appreciate feedback. With so many different perspectives out there feedback is an incredible way for collaboration. Any comments on this posts will be welcome on [Twitter](http://twitter.com/agpelliza) or e-mail. Accordingly, I'll rectificate any mistake on my posts and/or will create a new post regarding any related subjects.
+
+The main porpouse of this site is to have a space to consolidate experience and adquired knowledge, so most posts and resources provided here will be technical. I hope to be expanding the content and either adding few features as it gets more useful. Fill free to request whatever you feel that would be nice to add/remove or improve. There is no promise on doing so, but suggestions will be considered, that's for sure.
+
+Thaks on advanced for your contributions and.. Enjoy!
