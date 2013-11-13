@@ -1,5 +1,6 @@
 /.gs
 *~
+*_bkp*
 env.sh
 .DS_Store
 dump.rdb
