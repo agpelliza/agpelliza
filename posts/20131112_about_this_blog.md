@@ -2,4 +2,4 @@ This is a peculiar Blog, the first thing some may notice is that it has not **co
 
 The main porpouse of this site is to have a space to consolidate experience and adquired knowledge, so most posts and resources provided here will be technical. I hope to be expanding the content and either adding few features as it gets more useful. Fill free to request whatever you feel that would be nice to add/remove or improve. There is no promise on doing so, but suggestions will be considered, that's for sure.
 
-Thaks on advanced for your contributions and.. Enjoy!
+**Thaks on advanced for your contributions and.. Enjoy!**

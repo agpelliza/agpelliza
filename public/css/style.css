@@ -6,7 +6,12 @@ body {
   margin: 0;
   padding: 0;
   background-repeat: no-repeat; }
-
+  
+a {
+  color: #4d4d4d; }
+  a:hover {
+    color: #cbcbcb; }
+    
 .nav {
   width: 100%;
   border-top: 4px solid #4d4d4d;
