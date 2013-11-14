@@ -1,3 +1,5 @@
+###Ruby
+
 *Seams to be that installing Ruby is not such a trivial thing as one may think. So lets see how to accomplish this as simple as possible.*
 
 It’s possible that your system already has Ruby installed. Try running `$ ruby -v` to see the version. Most likely if it has Ruby installed it won't be a one of latests versions.
@@ -40,5 +42,18 @@ We are done, now you can tell RVM to use the Ruby version we just installed:
     $ ruby -v
     ruby 2.0.0p247 (2013-06-27 revision 41674) [x86_64-linux]
 
-Unfortunately, lots of things can go wrong along the way, the only general solution is web searches and determination.  
+###RubyGems
+
+RubyGems is a package manager for Ruby projects, and there are many useful libraries available as Ruby packages, or gems. As we installed RVM, we already have RubyGems, since RVM includes it automatically:
+
+        $ which gem
+        $HOME/.rvm/rubies/ruby-2.0.0-p0/bin/gem
+
+When installing gems, by default RubyGems generates two different kinds of documentation (called ri and rdoc), but many Ruby developers find that the time to build them isn’t worth the benefit. (Many programmers rely on online documentation instead of the native ri and rdoc documents.) To prevent the automatic generation of the documentation you can add a .gemrc file in your home directory like this `$ vim ~/.gemrc` (here vim is the text editor of your choice. If you’re using a different editor, you should replace this command as necessary.) and with the lines:
+
+        install: --no-rdoc --no-ri
+        update:  --no-rdoc --no-ri
+
+Hopefully we now have both Ruby and RubyGems installed and configured. Unfortunately, lots of things can go wrong along the way, the only general solution is web searches and determination.
+
 **Have a Good Hacking!**
