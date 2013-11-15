@@ -151,8 +151,10 @@ a {
       font-weight: normal; }
 
 .post {
+  font-family: "Impact, fantasy", serif;
   margin-top: 40px; }
   .post h1 {
+    font-size: 40px;
     font-weight: bold;
     color: #333333;
     margin: 0; }
@@ -161,12 +163,10 @@ a {
     font-size: 30px;
     font-style: italic;
     font-weight: bold;
-    font-family: "Impact, fantasy", serif;
     margin: 40px 0 20px; }
   .post p, .post ul, .post ol {
     font-size: 18px;
-    line-height: 25px;
-    font-family: "Impact, fantasy", serif; }
+    line-height: 25px; }
   .post img {
     position: relative;
     padding: 12px;
