@@ -1,4 +1,4 @@
-###Ruby
+##Ruby
 
 *Seams to be that installing Ruby is not such a trivial thing as one may think. So lets see how to accomplish this as simple as possible.*
 
@@ -42,7 +42,7 @@ We are done, now you can tell RVM to use the Ruby version we just installed:
     $ ruby -v
     ruby 2.0.0p247 (2013-06-27 revision 41674) [x86_64-linux]
 
-###RubyGems
+##RubyGems
 
 RubyGems is a package manager for Ruby projects, and there are many useful libraries available as Ruby packages, or gems. As we installed RVM, we already have RubyGems, since RVM includes it automatically:
 

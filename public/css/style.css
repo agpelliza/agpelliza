@@ -156,14 +156,17 @@ a {
     font-weight: bold;
     color: #333333;
     margin: 0; }
-  .post h2.date {
-    color: #888888;
-    font-weight: normal;
-    margin: 5px 0 20px; }
+  .post h2 {
+    color: #5d5d5d;
+    font-size: 30px;
+    font-style: italic;
+    font-weight: bold;
+    font-family: "Impact, fantasy", serif;
+    margin: 40px 0 20px; }
   .post p, .post ul, .post ol {
-    font-size: 15px;
-    line-height: 24px;
-    font-family: Arial, sans-serif; }
+    font-size: 18px;
+    line-height: 25px;
+    font-family: "Impact, fantasy", serif; }
   .post img {
     position: relative;
     padding: 12px;
@@ -236,3 +239,20 @@ a {
     margin: 23px 0 0 -210px;
     float: left; }
 
+code {
+  margin:0 2px;
+  padding:0px 5px;
+  border:1px solid #ddd;
+  font-size:13px;
+  background-color:#f8f8f8;
+  border-radius:3px; }
+
+pre code {
+  background-color:#f8f8f8;
+  border:1px solid #ddd;
+  font-size:13px;
+  line-height:19px;
+  overflow:auto;
+  padding:6px 10px;
+  border-radius:3px;
+  display: block; }
