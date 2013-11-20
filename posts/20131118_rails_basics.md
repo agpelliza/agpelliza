@@ -1,1 +1,0 @@
-Post about Rails basics.
